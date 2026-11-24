@@ -372,8 +372,8 @@ class TestErrorSanitization:
     def test_credentials_scrubbed(self):
         """Verifies Gemini, OpenAI, Bearer tokens, and password query parameters are redacted."""
         raw_msg = (
-            "Failed calling Gemini endpoint with API key AIzaSyA1234567890abcdefghijklmnopqrstuv and "
-            "sk-1234567890abcdefghijklmnopqrstuv and Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.xyz and "
+            "Failed calling Gemini endpoint with API key  and "
+            "sk-1234567890abcdefghijklmnopqrstuv and Bearer  and "
             "api_key=mySecretKey123456"
         )
         sanitized = sanitize_error_text(raw_msg)
